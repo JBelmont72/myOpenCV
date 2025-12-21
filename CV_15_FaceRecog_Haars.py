@@ -9,6 +9,8 @@ source .venv/bin/activate
 use the 3.9.6 ('venv':venv)  version in the interpreter!!
 in venv folder, selected lib/site_packages then select "cv2" then 'Data"
 which will show the haarcascade
+
+haar/haarcascade_frontalface_default.xml
 '''
 import sys
 import cv2
@@ -24,21 +26,23 @@ height=int(300)
 # height=int(360)
 
 # my ESP32S3 EYE  camera IP address
-url = "http://192.168.1.58/stream"
+# url = "http://192.168.1.58/stream"
 
-cam = cv2.VideoCapture(url)
+# cam = cv2.VideoCapture(url)
 
-# cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(0)
 # cam=cv2.VideoCapture(0,cv2.CAP_DSHOW)
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT,height)
 cam.set(cv2.CAP_PROP_FPS, 30)
 cam.set(cv2.CAP_PROP_FOURCC,cv2.VideoWriter_fourcc(*'MJPG'))
 #   /Users/judsonbelmont/Documents/SharedFolders/OpenCV/OpenCV_1/haar/haarcascade_frontalface_default.xml
+# /Users/judsonbelmont/Documents/untitled folder/myOpenCV/haar/haarcascade_frontalface_default.xml
 # the following three ways of loading the haarcascade work
-faceCascade = cv2.CascadeClassifier('/Users/judsonbelmont/Documents/SharedFolders/OpenCV/OpenCV_1/haar/haarcascade_frontalface_default.xml')
+faceCascade = cv2.CascadeClassifier('/Users/judsonbelmont/Documents/untitled/OpenCV/OpenCV_1/haar/haarcascade_frontalface_default.xml')
 # faceCascade =cv2.CascadeClassifier('/Users/judsonbelmont/Documents/Projects/OpenCV_1/.venv/lib/python3.9/site-packages/cv2/data/haarcascade_frontalface_default.xml')
 # faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
+# faceCascade = cv2.CascadeClassifier('haar/haarcascade_frontalface_default.xml')
 startTime = time.time()
 FPS=15
 while True:

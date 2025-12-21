@@ -60,7 +60,7 @@ height = 600
  #  640  380  <> 960 540
 # width=640 #960
 # height=380 #540
-cam=cv2.VideoCapture(1)
+cam=cv2.VideoCapture(0)
 cam.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG')) 
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
