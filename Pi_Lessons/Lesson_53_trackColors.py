@@ -1,7 +1,7 @@
 '''
 1. create trackbars for hue 0-180 value 0-255 saturation 0 - 255
 2. convert frame bgr to hsv
-
+/Users/judsonbelmont/Documents/untitled folder/myOpenCV/Pi_Lessons/Lesson_53_trackColors.py
 low bound. np.array[hue,val,sat]
 upper bound
 mask1 = np.inrange(hsvFrame,lowerBound,upperBound)
