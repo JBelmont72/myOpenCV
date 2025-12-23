@@ -8,15 +8,15 @@ train openCV to detect and recognize faces. find and identify the ones it has be
 (venv) judsonbelmont@Judsons-Air OpenCV_1 % python -m pip install
  face_recognition == 1.2.3
 need to do first
-1 download Python 3.6.8 64bit is what was recommended, i have 3.9.6
+1 download Python 3.11.5 64bit  i have 3.11.5
 2 create a virtual environment 
 3 download Cmake 3.21
 4 download dlib  (i could not the 19.7 version so downloaded latest)
 5 download face_recognition 1.2.3
 python -m venv .venv
 source .venv/bin/activate
-USE 3.9.6 pyenv!!!!!!!
-use the 3.9.6 ('venv':venv)  version in the interpreter!!
+USE 3.11.5 pyenv!!!!!!!
+use the 3.11.5 ('venv':venv)  version in the interpreter!!
 Note that the array for the face is an array within in array so as to accommodate multiple faces.
 Note that the digits are first the Right SIde, then the Top, then bottom and then the left side!
 

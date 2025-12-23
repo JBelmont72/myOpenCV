@@ -5,21 +5,22 @@ train openCV to detect and recognize faces. find and identify the ones it has be
 (venv) judsonbelmont@Judsons-Air OpenCV_1 % python -m pip install
  face_recognition == 1.2.3
 need to do first
-1 download Python 3.6.8 64bit is what was recommended, i have 3.9.6
+1 download Python 3.11.5 64bit is what was recommended, i have 3.11.5
 2 create a virtual environment 
 3 download Cmake 3.21
 4 download dlib  (i could not the 19.7 version so downloaded latest)
 5 download face_recognition 1.2.3
 python -m venv .venv
 source .venv/bin/activate
-USE 3.9.6 pyenv!!!!!!!
-use the 3.9.6 ('venv':venv)  version in the interpreter!!
+USE 3.11.5 pyenv!!!!!!!
+use the 3.11.5 ('venv':venv)  version in the interpreter!!
 Note that the array for the face is an array within in array so as to accommodate multiple faces.
 Note that the digits are first the Right SIde, then the Top, then bottom and then the left side!
 
 note: if going to show images in OpenCV then have to be BGR!!
 The Jpg files are RBG
 so need to convert the RGB to gbr so we can show them in OpenCV
+'''
 '''
 import sys
 import cv2
@@ -30,7 +31,7 @@ print(np.__version__)
 import face_recognition as FR
 print(f"Face Recogniton Version: {FR.__version__}")
 font = cv2.FONT_HERSHEY_SIMPLEX
-donFace = FR.load_image_file('/Users/judsonbelmont/Documents/Projects/OpenCV_1/demoImages/known/Donald Trump.jpg')
+donFace = FR.load_image_file('/Users/judsonbelmont/Documents/SharedFolders/OpenCV/myOpenCV/demoImages/known/Donald Trump.jpg')
 faceLoc =FR.face_locations(donFace)[0]  #the zero is so we detect the first face
 topLoc  = faceLoc[0]
 rightLoc   = faceLoc[1]
@@ -55,22 +56,24 @@ import face_recognition as FR
 font=cv2.FONT_HERSHEY_SIMPLEX
 width=640
 height=360
-cam=cv2.VideoCapture(0,cv2.CAP_DSHOW)
+# cam=cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cam=cv2.VideoCapture(0)
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT,height)
 cam.set(cv2.CAP_PROP_FPS, 30)
 cam.set(cv2.CAP_PROP_FOURCC,cv2.VideoWriter_fourcc(*'MJPG'))
  
-paulFace=FR.load_image_file('C:/Users/Valued Customer/Documents/Python/demoImages/known/Paul McWhorter.jpg')
+paulFace=FR.load_image_file('/Users/judsonbelmont/Documents/SharedFolders/OpenCV/myOpenCV/demoImages/known/Paul McWhorter.jpg')
 faceLoc=FR.face_locations(paulFace)[0]
 paulFaceEncode=FR.face_encodings(paulFace)[0]
  
-gavFace=FR.load_image_file('C:/Users/Valued Customer/Documents/Python/demoImages/known/Gavriella Joy.jpg')
+gavFace=FR.load_image_file('/Users/judsonbelmont/Documents/SharedFolders/OpenCV/myOpenCV/demoImages/known/Judson Belmont.jpg')
 faceLoc=FR.face_locations(gavFace)[0]
 gavFaceEncode=FR.face_encodings(gavFace)[0]
  
 knownEncodings=[paulFaceEncode,gavFaceEncode]
 names=['Paul McWhorter','Gavriella Joy']
+names=['Paul McWhorter','Judson Belmont']
  
 while True:
     ignore,  unknownFace = cam.read()
@@ -98,4 +101,3 @@ while True:
         break
 cam.release()
 cv2.destroyAllWindows()
-'''

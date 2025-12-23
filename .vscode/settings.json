@@ -2,8 +2,9 @@
 
 
 {
-    "python.defaultInterpreterPath": "/Users/judsonbelmont/Documents/untitled folder/myOpenCV/.venv/bin/python3",
+    "python.defaultInterpreterPath": "/Users/judsonbelmont/Documents/SharedFolders/OpenCV/myOpenCV/.venv/bin/python",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.analysis.extraPaths": ["./"]
+    "python.analysis.extraPaths": ["./"],
+    "python.terminal.activateEnvironment": true
 }
