@@ -6,7 +6,8 @@ import cv2
 import requests
 import numpy as np
 
-ESP32_STREAM_URL = "http://192.168.1.58/"   # <-- change to your ESP32 IP
+ESP32_STREAM_URL = "http://10.0.0.30/stream"   # <-- change to your ESP32 IP
+# ESP32_STREAM_URL = "http://192.168.1.58/"   # <-- change to your ESP32 IP
 
 # Haar cascade in the default OpenCV directory
 cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"

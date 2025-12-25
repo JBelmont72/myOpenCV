@@ -1,0 +1,18 @@
+# Core numerical
+numpy==1.26.4
+scipy==1.11.4
+
+# OpenCV
+opencv-python==4.9.0.80
+imutils==0.5.4
+pillow==11.1.0
+matplotlib==3.9.0
+
+# MediaPipe
+mediapipe==0.10.14
+protobuf<5
+absl-py
+flatbuffers
+
+# GUI
+PyQt5==5.15.9
