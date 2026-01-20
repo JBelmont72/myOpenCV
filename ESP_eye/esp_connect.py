@@ -59,7 +59,8 @@
 import cv2
 import time
 # my ESP32S3 EYE  camera IP address
-url = "http://192.168.1.58/stream"
+url = "http://10.0.0.20/stream"
+# url = "http://192.168.1.58/stream"
 
 cap = cv2.VideoCapture(url)
 # cap=cv2.VideoCapture(1)
@@ -87,11 +88,11 @@ while True:
     fps =.95*fps + 0.05 * FPS
     # print(frame.shape)
     
-    print(int(fps) )
+    # print(int(fps) )
     frame=cv2.flip(frame,1)
 
     Resized_frame = cv2.resize(frame, (new_width, new_height), interpolation=cv2.INTER_CUBIC)
-    print(Resized_frame.shape)
+    # print(Resized_frame.shape)
     cv2.putText(Resized_frame,str(int(fps))+' fps',(30,60),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),1)
     cv2.imshow("ESP32 Camera", Resized_frame)
 
