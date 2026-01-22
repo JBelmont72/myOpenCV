@@ -10,7 +10,7 @@ import cv2
 import mediapipe as mp
 import threading
 import time
-cap = cv2.VideoCapture("http://10.0.0.30/stream")
+cap = cv2.VideoCapture("http://10.0.0.20/stream")
 
 if not cap.isOpened():
     raise RuntimeError("Failed to open stream")

@@ -105,7 +105,7 @@ print(np.__version__)
 myRadius =20
 dispW=640
 dispH=480
-cam=cv2.VideoCapture("http://10.0.0.31/stream")
+cam=cv2.VideoCapture("http://10.0.0.20/stream")
 # cam = cv2.VideoCapture(1)
 # cam=cv2.VideoCapture(0,cv2.CAP_DSHOW)
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, dispW)

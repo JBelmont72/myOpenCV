@@ -72,8 +72,8 @@ faceLoc=FR.face_locations(gavFace)[0]
 gavFaceEncode=FR.face_encodings(gavFace)[0]
  
 knownEncodings=[paulFaceEncode,gavFaceEncode]
-names=['Paul McWhorter','Gavriella Joy']
-names=['Paul McWhorter','Judson Belmont']
+names=['PM','Gavriella Joy']
+names=['PM','Judson Belmont']
  
 while True:
     ignore,  unknownFace = cam.read()

@@ -142,7 +142,7 @@ def onTrack6(val):
  
 width=640
 height=360
-url = "http://192.168.1.58/stream"
+url = "http://192.168.1.20/stream"
 
 cam = cv2.VideoCapture(url)
 # cam=cv2.VideoCapture(1)
